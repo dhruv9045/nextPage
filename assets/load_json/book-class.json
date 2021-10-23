@@ -1,0 +1,65 @@
+[
+  {
+
+    "id": 1,
+    "date": "Thu May 06 2021",
+    "time": "01:00 PM PST-02:00 PM PST",
+    "availability": "3"
+  },
+  {
+
+    "id": 2,
+    "date": "Thu May 06 2021",
+    "time": "03:00 PM PST-04:00 PM PST",
+    "availability": "1"
+  },
+  {
+
+    "id": 3,
+    "date": "Fri May 07 2021",
+    "time": "10:00 AM PST-11:00 AM PST",
+    "availability": "2"
+  },
+  {
+
+    "id": 4,
+    "date": "Fri May 07 2021",
+    "time": "01:00 PM PST-02:00 PM PST",
+    "availability": "0"
+  },
+  {
+
+    "id": 5,
+    "date": "Fri May 07 2021",
+    "time": "03:00 PM PST-04:00 PM PST",
+    "availability": "0"
+  },
+  {
+
+    "id": 6,
+    "date": "Sat May 08 2021",
+    "time": "01:00 PM PST-02:00 PM PST",
+    "availability": "5"
+  },
+  {
+
+    "id": 7,
+    "date": "Sat May 08 2021",
+    "time": "03:00 PM PST-04:00 PM PST",
+    "availability": "2"
+  },
+  {
+
+    "id": 8,
+    "date": "Sun May 09 2021",
+    "time": "01:00 PM PST-02:00 PM PST",
+    "availability": "4"
+  },
+  {
+
+    "id": 9,
+    "date": "Sun May 09 2021",
+    "time": "03:00 PM PST-04:00 PM PST",
+    "availability": "3"
+  }
+]
