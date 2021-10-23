@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<List<BookClass>> readJsonData() async {
     final jsonData =
-        await rootBundle.loadString('assets/load_json/book-class.json');
+        await rootBundle.loadString('load_json/book-class.json');
     final list = json.decode(jsonData) as List<dynamic>;
     return list.map((e) => BookClass.fromJson(e)).toList();
   }
