@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:nextpage/pages/home_page.dart';
 import 'package:nextpage/provider/timer_info.dart';
 import 'package:nextpage/pages/splash_screen.dart';
 import 'package:path_provider/path_provider.dart';
