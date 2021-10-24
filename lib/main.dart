@@ -21,10 +21,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChangeNotifierProvider(
-        create: (context) => TimerInfo(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider.value(
+            value:TimerInfo()
+          )
+        ],
         child: SplashScreen(),
-      ),
+      )
     );
   }
 }

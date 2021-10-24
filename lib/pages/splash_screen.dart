@@ -11,33 +11,38 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  bool _isInit = true;
   @override
-  void initState() {
-    Timer.periodic(Duration(seconds: 1), (t) async {
-      var timerInfo = Provider.of<TimerInfo>(context, listen: false);
-      try {
+  void didChangeDependencies() {
+    if (_isInit) {
+      Timer.periodic(Duration(seconds: 1), (t) async {
+        var timerInfo = Provider.of<TimerInfo>(context, listen: false);
         if (timerInfo.getRemainingTime() != 0) {
-          await timerInfo.updateRemainingTime();
+          timerInfo.updateRemainingTime();
         } else {
-          setState(() {
-            timerInfo.dispose();
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ));
-          });
+          timerInfo.destroyRemainingTime();
+          t.cancel();
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomePage(),
+              ));
         }
-      } catch (e) {
-        print(e);
-      }
-    });
-    super.initState();
+      });
+
+      setState(() {});
+    }
+    _isInit = false;
+    super.didChangeDependencies();
   }
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
+    var timerInfo = Provider.of<TimerInfo>(context, listen: false);
     return Scaffold(
+      key: _scaffoldKey,
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

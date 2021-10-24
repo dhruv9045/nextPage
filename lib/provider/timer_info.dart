@@ -2,9 +2,10 @@
 import 'package:flutter/foundation.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
-int min = 30;
-int max = 60;
+int min = 3;
+int max = 6;
 Random random = new Random();
 
 class TimerInfo extends ChangeNotifier {
@@ -17,7 +18,8 @@ class TimerInfo extends ChangeNotifier {
   }
 
   destroyRemainingTime() {
-  _remainingTime;
+    _remainingTime=0 ;
+    notifyListeners();
   }
 
 }
