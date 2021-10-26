@@ -40,7 +40,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var timerInfo = Provider.of<TimerInfo>(context, listen: false);
     return Scaffold(
       key: _scaffoldKey,
       body: Center(

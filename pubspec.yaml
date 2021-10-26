@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  get: any
   cupertino_icons: ^1.0.0
   provider: any
   hive: any

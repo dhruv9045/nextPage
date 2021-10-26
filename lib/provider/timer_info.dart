@@ -2,7 +2,6 @@
 import 'package:flutter/foundation.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 int min = 3;
 int max = 6;
